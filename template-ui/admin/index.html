@@ -53,6 +53,12 @@
     <!-- ======= Left Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
         <ul class="sidebar-nav" id="sidebar-nav">
+            <li>
+                <div class="card text-center p-2" id="page-position-name">
+                  <h5 class="fw-bold text-white mt-2">Main Page</h5>
+                </div>
+            </li>
+
             <li class="nav-item">
             <a class="nav-link " href="index.html">
                 <i class="bi bi-grid"></i>
@@ -66,7 +72,7 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                <a href="components-alerts.html">
+                <a href="./acara/index.html">
                     <i class="bi bi-circle"></i><span>Acara</span>
                 </a>
                 </li>
@@ -90,7 +96,7 @@
 
             <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#pesan-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Pesan</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-envelope"></i><span>Pesan</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="pesan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -113,7 +119,7 @@
 
             <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#grafik-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Grafik</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-file-earmark-bar-graph-fill"></i><span>Grafik</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="grafik-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -136,7 +142,7 @@
 
             <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#laporan-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-file-text"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="laporan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -164,7 +170,7 @@
 
             <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#pengaturan-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Pengaturan</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-gear"></i><span>Pengaturan</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="pengaturan-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -203,45 +209,277 @@
     <button class="toggle-sidebar-btn text-black mb-2" id="toggle-sidebar-btn" data-sidebar-status="opened"><i class="bi bi-list"></i></button>
 
 
-    <main id="main" class="main">
-    <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
+    <main id="main" class="container">
+        <div class="pagetitle">
+          <h1>Dashboard</h1>
+          <nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </nav>
+        </div><!-- End Page Title -->
 
-    <section class="section dashboard">
-      <div class="row">
+        <div class="card" id="card-counter">
+            <div class="row">
 
-      </div>
-    </section>
+                <div class="card-body-content">
+                    <div class="card rounded">
+                        <div class="card-body" id="card-body-content-1">
+                            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Acara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body-content">
+                    <div class="card rounded">
+                        <div id="card-body-content-2">
+                            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Peserta</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card-body-content">
+                    <div class="card rounded">
+                        <div id="card-body-content-3">
+                            <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Sertifikat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body-content mt-4">
+                    <div class="card rounded">
+                        <h5 class="text-center mt-2">Pilih Filter</h5>
+                        <div id="card-body-content-4">
+                            <select name="" id="">
+                                <option value="">-- Pilih Bulan --</option>
+                                <option value="">Semua</option>
+                                <option value="">Januari</option>
+                                <option value="">Februari</option>
+                                <option value="">Maret</option>
+                                <option value="">April</option>
+                                <option value="">Mei</option>
+                                <option value="">Juni</option>
+                                <option value="">Juli</option>
+                                <option value="">Agustus</option>
+                                <option value="">September</option>
+                                <option value="">Oktober</option>
+                                <option value="">November</option>
+                                <option value="">Desember</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body-content mt-5">
+                    <div id="card-body-content-5">
+                        <a href="/" class="btn btn-lg btn-primary fw-bold">Detail</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card" id="card-container">
+            <div class="row">
+                <!-- Reports -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title">Grafik</h5>
+                        <!-- Line Chart -->
+                        <div id="reportsChart"></div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                            new ApexCharts(document.querySelector("#reportsChart"), {
+                                series: [{
+                                name: 'Acara',
+                                data: [31, 40, 28, 51, 42, 82, 56],
+                                }, {
+                                name: 'Peserta',
+                                data: [11, 32, 45, 32, 34, 52, 41]
+                                }, {
+                                name: 'Sertifikat',
+                                data: [15, 11, 32, 18, 9, 24, 11]
+                                }],
+                                chart: {
+                                height: 350,
+                                type: 'area',
+                                toolbar: {
+                                    show: false
+                                },
+                                },
+                                markers: {
+                                size: 4
+                                },
+                                colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                                fill: {
+                                type: "gradient",
+                                gradient: {
+                                    shadeIntensity: 1,
+                                    opacityFrom: 0.3,
+                                    opacityTo: 0.4,
+                                    stops: [0, 90, 100]
+                                }
+                                },
+                                dataLabels: {
+                                enabled: false
+                                },
+                                stroke: {
+                                curve: 'smooth',
+                                width: 2
+                                },
+                                xaxis: {
+                                type: 'datetime',
+                                categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                },
+                                tooltip: {
+                                x: {
+                                    format: 'dd/MM/yy HH:mm'
+                                },
+                                }
+                            }).render();
+                            });
+                        </script>
+                        <!-- End Line Chart -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Reports -->
+                <div class="col-md-6">
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <div class="mt-3 text-center" id="table-container-result-acara">
+                                <p class="bg-primary text-white p-2 rounded fw-bolder">Result Acara</p>
+                                <div class="table-responsive" id="table-result-acara">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>result 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>result 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>result 3</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>result 4</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>result 4</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>result 4</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>result 4</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <div id="right-side-bar" class="closed">
         <!-- ======= Rigth Sidebar ======= -->
         <aside>
             <ul class="sidebar-nav" id="sidebar-nav">
                 <li>
-                    <div class="card mt-5">
+
+                    <div class="text-center">
+                        <p class="p-2 text-white rounded fw-bolder" id="logo-message">Message</p>
+                    </div>
+
+                    <div class="card mt-2">
                         <div class="card-body">
                             <div class="mt-3 text-center">
-                                <p class="bg-primary p-2 rounded text-white fw-bolder">Admin</p>
-                                <img src="assets/img/profile-img.jpg" class="rounded mx-auto d-block" alt="">
-                                <p class="mt-2 text-black fw-bolder">Aldi Ramdani Al-Kasepi </br> 11223344</p>
+                                <p class="bg-warning p-2 rounded fw-bolder">Pesan Darurat</p>
+                                <div class="table-responsive" id="table-container">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 3</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 4</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </li>
                 <li>
                     <div class="card mt-5">
                         <div class="card-body">
                             <div class="mt-3 text-center">
-                                <p class="bg-primary p-2 rounded text-white fw-bolder">Admin</p>
-                                <img src="assets/img/profile-img.jpg" class="rounded mx-auto d-block" alt="">
-                                <p class="mt-2 text-black fw-bolder">Aldi Ramdani Al-Kasepi </br> 11223344</p>
+                                <p class="bg-info p-2 rounded text-white fw-bolder">Pesan untuk Anda</p>
+                                <div class="table-responsive" id="table-container">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 1</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 2</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 3</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p>Pesan 4</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -253,16 +491,6 @@
     <button class="text-black mb-2" id="toggle-right-sidebar-btn" data-sidebar-status="close"><i class="bi bi-envelope"></i></button>
 
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
