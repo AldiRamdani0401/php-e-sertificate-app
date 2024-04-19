@@ -98,28 +98,127 @@
                 <h6 class="status-progres">Generate</h6>
               </div>
             </div>
-          </div>
+        </div>
 
       <div id="container-buat-acara">
         <div class="card" id="card-container-form-buat-acara">
-          <!-- Form Buat Absensi Acara -->
-          <p class="bg-primary text-white p-2 mt-3 fw-bolder text-center rounded">Form Absensi Acara</p>
+          <!-- Form Buat Acara -->
+          <p class="bg-primary text-white p-2 mt-3 fw-bolder text-center rounded">Form Data Acara</p>
           <div class="mt-3" id="form-buat-data-acara">
             <form action="">
-                <!-- Input Header Absensi Acara -->
+                <!-- Input Nama Acara -->
                 <div class="mb-3">
-                    <label for="header-absensi" class="form-label fw-bold">Header Absensi Acara : </label>
-                    <input type="text" class="form-control" id="header-absensi" placeholder="Masukkan Header Absensi">
+                    <label for="nama-acara" class="form-label fw-bold">Nama Acara : </label>
+                    <input type="text" class="form-control" id="nama-acara" placeholder="Masukkan nama acara" required>
                 </div>
 
-                <!-- Input Form 1 -->
-                <div class="mb-3" id="container-input-form-absensi">
-                    <label for="lokasi-acara" class="form-label fw-bolder">Input Form :</label>
-                    <input type="text" class="form-control" id="lokasi-acara" placeholder="Masukkan Label Input" required>
+                <!-- Input Kategori Acara -->
+                <div class="mb-3">
+                    <label for="kategori-acara" class="form-label fw-bold">Kategori Acara : </label>
+                    <select class="form-select" id="kategori-acara" required>
+                        <option selected disabled value="">Pilih kategori acara</option>
+                        <option value="kategori1">Kategori 1</option>
+                        <option value="kategori2">Kategori 2</option>
+                        <option value="kategori3">Kategori 3</option>
+                    </select>
                 </div>
 
-                <button class="btn btn-primary" onclick="tambahInput(event)">+ Tambah Input</button>
+                <!-- Input Tanggal & Waktu Pelaksanaan Acara -->
+                <div class="row">
+                  <label class="form-label fw-bold">Pelaksanaan Acara:</label>
+                    <div class="col-md-6 mb-3">
+                        <label for="tanggal-pelaksanaan" class="form-label">Tanggal :</label>
+                        <input type="date" class="form-control" id="tanggal-pelaksanaan" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="waktu-pelaksanaan" class="form-label">Waktu :</label>
+                        <input type="text" class="form-control" id="waktu-pelaksanaan" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" title="Format: hh:mm (contoh: 09:30)" placeholder="00:00" required>
+                      </div>
+                </div>
 
+                <!-- Input Tanggal & Waktu Berakhir Acara -->
+                <div class="row">
+                  <label class="form-label fw-bold">Berakhir Acara:</label>
+                  <div class="col-md-6 mb-3">
+                      <label for="tanggal-berakhir" class="form-label">Tanggal :</label>
+                      <input type="date" class="form-control" id="tanggal-berakhir" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="waktu-berakhir" class="form-label">Waktu :</label>
+                      <input type="text" class="form-control" id="waktu-pelaksanaan" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" title="Format: hh:mm (contoh: 09:30)" placeholder="00:00" required>
+                  </div>
+                </div>
+                <!-- Input Lokasi Acara -->
+                <div class="mb-3">
+                    <label for="lokasi-acara" class="form-label fw-bolder">Lokasi Acara :</label>
+                    <input type="text" class="form-control" id="lokasi-acara" placeholder="Masukkan lokasi acara" required>
+                </div>
+
+                <!-- Input Jumlah Peserta -->
+                <div class="mb-3">
+                  <label for="jumlah-peserta" class="form-label fw-bolder">Jumlah Peserta :</label>
+                  <input type="number" class="form-control" id="jumlah-peserta" min="0" required>
+                </div>
+
+                <!-- Input Status Acara -->
+                <div class="mb-3">
+                  <label for="statusAcara" class="form-label fw-bolder">Status Acara :</label>
+                  <select class="form-select" id="statusAcara" required>
+                      <option value="">Pilih status acara</option>
+                      <option value="terjadwal">Terjadwal</option>
+                      <option value="berlangsung">Berlangsung</option>
+                      <option value="selesai">Selesai</option>
+                  </select>
+                </div>
+
+                <!-- Input Tanggal & Waktu Registrasi Acara -->
+                <div class="row">
+                  <label class="form-label fw-bold">Buka Registrasi Acara :</label>
+                  <div class="col-md-6 mb-3">
+                      <label for="tanggal-start-registrasi" class="form-label">Tanggal :</label>
+                      <input type="date" class="form-control" id="tanggal-start-registrasi" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="waktu-start-registrasi" class="form-label">Waktu :</label>
+                      <input type="text" class="form-control" id="waktu-start-registrasi" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" title="Format: hh:mm (contoh: 09:30)" placeholder="00:00" required>
+                    </div>
+                </div>
+
+                <!-- Input Tanggal & Waktu Berakhir Registrasi Acara -->
+                <div class="row">
+                  <label class="form-label fw-bold">Tutup Registrasi Acara :</label>
+                  <div class="col-md-6 mb-3">
+                      <label for="tanggal-end-registrasi" class="form-label">Tanggal :</label>
+                      <input type="date" class="form-control" id="tanggal-end-registrasi" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="waktu-end-registrasi" class="form-label">Waktu :</label>
+                      <input type="text" class="form-control" id="waktu-end-registrasi" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" title="Format: hh:mm (contoh: 09:30)" placeholder="00:00" required>
+                    </div>
+                </div>
+
+                <!-- Input Nomor Rekening Registrasi -->
+                <div class="mb-3">
+                  <label for="nomor-rekening" class="form-label fw-bolder">Nomor Rekening :</label>
+                  <input type="text" class="form-control" id="nomor-rekening" placeholder="Masukkan Nomor Rekening Acara">
+                </div>
+
+                <!-- Input Pilih Head Admin -->
+                <div class="mb-3">
+                  <label for="head-admin" class="form-label fw-bolder">Head Admin :</label>
+                  <select class="form-select" id="head-admin" required>
+                      <option value="">Pilih Head Admin</option>
+                      <option value="admin1">Asep Balon</option>
+                      <option value="admin2">Budi Cilok</option>
+                      <option value="admin3">Cahya Suci</option>
+                  </select>
+                </div>
+
+                <!-- Input Contact Admin -->
+                <div class="mb-3">
+                  <label for="contact-admin" class="form-label fw-bolder">Nomor Rekening :</label>
+                  <input type="tel" class="form-control" id="contact-admin" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="08XX-XXXX-XXXX" required>
+                </div>
           </div>
         </div>
 
@@ -197,7 +296,7 @@
           <!-- End Container Select Admin -->
           <!-- Tombol Submit -->
           <div id="container-btn-buat-data-acara">
-            <a href="./buat-sertifikat.html" class="btn btn-primary fw-bold">Submit</a>
+            <a href="./" class="btn btn-primary fw-bold">Submit</a>
             <button type="reset" class="btn btn-warning fw-bold">Reset</button>
             <a href="javascript:history.back()" class="btn btn-danger fw-bold">Batal</a>
           </div>
